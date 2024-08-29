@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "funcnodes-huggingface"
+version = "0.1.1"
+description = ""
+authors = []
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+funcnodes = "*"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+pre-commit = "*"
+funcnodes-module = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.plugins."funcnodes.module"]
+module = "funcnodes_huggingface"
+shelf = "funcnodes_huggingface:NODE_SHELF"
